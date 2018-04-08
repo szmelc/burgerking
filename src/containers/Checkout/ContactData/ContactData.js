@@ -8,11 +8,9 @@ class ContactData extends Component {
   state = {
     name: '',
     email: '',
-    address: {
-      street: '',
-      city: '',
-      zipCode: ''
-    },
+    street: '',
+    city: '',
+    zipCode: '',
     loading: false
   }
 
@@ -21,11 +19,13 @@ class ContactData extends Component {
     this.setState({loading: true})
     const order = {
       ingredients: this.props.ingredients,
-      price: this.props.totalPrice,
+      price: this.props.price,
       customer: {
         name: 'Łukasz',
-        address: 'Łazarz',
-        email: 'lukasz.szmelc@netguru.pl'
+        email: 'lukasz.szmelc@netguru.pl',
+        street: 'Wojskowa 6',
+        city: 'Poznań',
+        zipCode: '60-297'
       }
 
     }
@@ -63,4 +63,4 @@ class ContactData extends Component {
 }
 
 
-export default ContactData
+export default ContactData;
